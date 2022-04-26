@@ -40,6 +40,8 @@ flatpickr(refs.inputField, options);
 const onStart = () => {
   const date = refs.inputField.value;
   const unixDate = new Date(date).getTime();
+  refs.start.disabled = true;
+  refs.inputField.disabled = true;
 
   const intervalId = setInterval(() => {
     const now = new Date().getTime();
